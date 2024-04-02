@@ -1,0 +1,351 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f44336;
+  color: white;
+}
+
+.search-bar {
+  width: 300px;
+  padding: 8px;
+  border-radius: 20px;
+  border: none;
+  font-size: 16px;
+}
+
+.categories {
+  display: flex;
+  overflow-x: auto;
+  padding: 10px 20px;
+  background-color: #333;
+}
+
+.categories button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 8px 16px;
+  margin-right: 10px;
+}
+
+.categories button:last-child {
+  margin-right: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.recommended {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.video-data {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.thumbnail {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.title {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.channel-name {
+  font-size: 14px;
+}
+
+.category,
+.duration,
+.views,
+.uploaded-date-time {
+  font-size: 12px;
+  color: #666;
+}
+
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  z-index: 1000;
+  padding: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.logo {
+  width: 100px;
+  height: auto;
+}
+.video-data {
+  border-bottom: 1px solid #ccc; /* Add a border between video items */
+  padding: 10px; /* Add padding around each video item */
+}
+
+.thumbnail {
+  width: 200px; /* Adjust thumbnail width */
+  height: auto; /* Let the height adjust automatically */
+  margin-right: 10px; /* Add some space between thumbnail and text */
+}
+
+.video-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.video-info h3 {
+  margin: 0; /* Remove default margin */
+  margin-bottom: 5px; /* Add some space below the title */
+}
+
+.video-info span {
+  font-size: 14px; /* Adjust font size */
+  color: #606060; /* Adjust text color */
+  margin-bottom: 3px; /* Add some space between each piece of information */
+}
+
+.views,
+.uploaded-date-time {
+  margin-left: auto; /* Push these elements to the right */
+}
+.search-bar {
+  flex: 1;
+  margin: 0 20px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+nav img {
+  margin-right: 10px;
+}
+
+.categories {
+  display: flex;
+  overflow-x: auto;
+  padding: 10px;
+}
+
+.categories span {
+  padding: 8px 15px;
+  background-color: #ddd;
+  border-radius: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.categories span:last-child {
+  margin-right: 0;
+}
+
+.main {
+  padding: 20px;
+}
+
+.recommended {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.recommended .video {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.recommended .video .info {
+  padding: 10px;
+}
+
+.recommended .video .title {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.recommended .video .channel {
+  font-size: 14px;
+  color: #777;
+}
+img,
+.icons {
+  cursor: pointer;
+}
+
+.icons {
+  filter: invert(1);
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  /* background-color:var(--grey-m); */
+}
+
+.icons.menu1 {
+  height: 30px;
+  width: 30px;
+  margin-right: 20px;
+  margin-left: -5px;
+}
+
+.icons.red {
+  filter: invert(15%) sepia(96%) saturate(7291%) hue-rotate(360deg)
+    brightness(102%) contrast(107%);
+}
+
+.title-icon{
+  position: relative;
+  top:2.5px;
+}
+main {
+  margin-top: 100px; /* Adjust margin to make space for sticky header */
+  padding-left: 200px; /* Adjust padding to make space for the aside section */
+}
+/* Aside Section  */
+.aside-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.aside-item img {
+  width: 30px; /* Adjust the width as needed */
+  height: 30px; /* Adjust the height as needed */
+  margin-right: 10px;
+}
+
+.aside-text {
+
+  font-size: 20px;
+}
+aside {
+  position: fixed;
+  top: 120px;
+  left: 0;
+  height: 100%;
+  width: 200px;
+  overflow-y: auto;
+  background-color: white; /* Add background color */
+  z-index: 1000; /* Ensure the aside section is above other elements */
+
+
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none; /* Firefox */
+}
+
+aside::-webkit-scrollbar {
+  display: none;
+}
+
+aside section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 55px;
+}
+
+aside section .icons {
+  margin-bottom: 20px;
+}
+
+aside section .icons.channels {
+  filter: none;
+  border-radius: 50%;
+}
+.loader {
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: auto;
+  margin-top: 20px; /* Adjust margin as needed */
+  display: none; /* Initially hide the loader */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+/* For smaller screens, adjust layout */
+@media only screen and (max-width: 600px) {
+  /* Adjust layout for sticky section */
+  .sticky {
+    padding: 10px;
+  }
+  
+  /* Adjust layout for search bar */
+  .search-bar {
+    width: 80%;
+    margin: 10px auto;
+  }
+  
+  /* Adjust layout for categories */
+  .categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+  }
+  .recommended {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+  }
+  /* Adjust layout for video data */
+  .video-data {
+    width: 90%;
+    margin: 10px auto;
+  }
+  
+  /* Adjust layout for thumbnail */
+  .thumbnail {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Adjust layout for aside items */
+  .aside-item {
+    width: 45%;
+    margin: 5px auto;
+  }
+}
+
